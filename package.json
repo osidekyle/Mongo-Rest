@@ -1,0 +1,24 @@
+{
+  "name": "Mongo-Rest",
+  "version": "1.0.0",
+  "description": "Learning how to make a REST API with MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osidekyle/Mongo-Rest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osidekyle/Mongo-Rest/issues"
+  },
+  "homepage": "https://github.com/osidekyle/Mongo-Rest#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
