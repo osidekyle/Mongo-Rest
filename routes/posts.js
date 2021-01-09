@@ -1,6 +1,6 @@
 const express=require("express")
 const router=express.Router();
-const Post=require("../models/Post.js")
+const Post=require("../models/Post")
 
 
 //ROUTES
@@ -15,7 +15,19 @@ router.get('/specific',(req,res)=>{
 
 
 router.post("/",(req,res)=>{
-    console.log(req.body)
+    const post=new Post({
+        title:req.body.title,
+        description:req.body.description,
+
+    })
+    
+    post.save().then(data=>{
+        console.log(post)
+       res.json(data)
+    })
+    .catch((err)=>{
+        res.json({message : err})
+    })
 })
 
 module.exports=router
